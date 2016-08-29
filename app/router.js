@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('listing');
+  this.route('listing', {path: '/listing/:listing_id'});
   this.route('account');
   this.route('renter');
   this.route('owner');

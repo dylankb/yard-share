@@ -1,1 +1,7 @@
 {{owner-details owner=model}}
+
+<div class="owner-listing-tiles">
+  {{#each model.listings as |listing|}}
+    {{listing-tile listing=listing}}
+  {{/each}}
+</div>

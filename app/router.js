@@ -9,9 +9,11 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('listings');
   this.route('account');
-  this.route('renter');
   this.route('owner', {path: '/owner/:owner_id'});
   this.route('listing-detail', {path: '/listing-detail/:listing_id'});
+  this.route('renter', {path: '/renter/:renter_id'});
+  this.route('log-in');
+  this.route('error');
 });
 
 export default Router;

@@ -11,7 +11,7 @@ module.exports = function(environment) {
       authDomain: "yard-share.firebaseapp.com",
       databaseURL: "https://yard-share.firebaseio.com",
       storageBucket: "yard-share.appspot.com",
-    }
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

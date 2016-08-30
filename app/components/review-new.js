@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewReview: false,
+  ratings: [1, 2, 3, 4, 5],
   actions: {
     addNewReview() {
       this.set('addNewReview', true);

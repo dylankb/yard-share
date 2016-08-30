@@ -9,6 +9,7 @@
   <div class="owner-listing-tiles">
     {{#each model.listings as |listing|}}
     {{listing-tile listing=listing}}
+    {{listing-update listing=listing updateListing="updateListing" destroyListing="destroyListing"}}
     {{/each}}
   </div>
 </div>

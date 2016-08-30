@@ -22,6 +22,22 @@ export default Ember.Route.extend({
         }
       });
       owner.save();
+    },
+    destroyListing(listing) {
+      var ratings_delete = listing.get('reviews').map(function(review) {
+        return review.destroyRecord;
+      });
+      Ember.RSVP.all(ratings_delete).then(function(){
+        return listing.destroyRecord();
+      });
+    },
+    updateListing(params, listing) {
+      Object.keys(params).forEach(function(key){
+        if (params[key]!==undefined) {
+          listing.set(key, params[key]);
+        }
+      });
+      listing.save();
     }
   }
 });

@@ -21,9 +21,9 @@
        <label for="text">Comments</label>
        {{textarea value=text id="text" class="form-control"}}
      </div>
-     <button class="btn" {{action 'saveReview'}}>Add Review</button>
+     <button class="btn btn-default" {{action 'saveReview'}}>Add Review</button>
    </form>
 </div>
 {{else}}
-<button class="btn" {{action 'addNewReview'}}>Add a Review</button>
+<button class="btn btn-default"{{action 'addNewReview'}}>Add a Review</button>
 {{/if}}

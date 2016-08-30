@@ -74,7 +74,7 @@
       <input type="checkbox" id=events checked={{listing.events}} {{action 'addUsage' on='change'}}>
       <label for="events">Events</label><br>
     </div>
-    <button class="btn" {{action 'updateListing' listing}}>Save Update</button>
+    <button class="btn btn-default" {{action 'updateListing' listing}}>Save Update</button>
     <button class="btn btn-default" {{action 'hideListingForm'}}>Cancel</button>
   </form>
 {{else}}

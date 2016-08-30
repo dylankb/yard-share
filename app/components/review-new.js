@@ -9,11 +9,11 @@ export default Ember.Component.extend({
     saveReview() {
       var params = {
         username: this.get('username'),
-        rating: this.get('rating'),
+        rating: parseInt(this.get('rating')),
         text: this.get('text'),
         timestamp: Date.now(),
-        renter: "",
-        listing: this.get('listing')
+        renter: this.get('renter') || "",
+        listing: this.get('listing') || ""
       };
       this.sendAction('saveReview', params);
       this.set('addNewReview', false);

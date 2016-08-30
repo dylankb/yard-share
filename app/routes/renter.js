@@ -15,6 +15,14 @@ export default Ember.Route.extend({
         }
       });
       renter.save();
+    },
+    saveReview(params) {
+      var renter = params.renter;
+      var newReview = this.store.createRecord('review', params);
+      renter.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return renter.save();
+      });
     }
   }
 });

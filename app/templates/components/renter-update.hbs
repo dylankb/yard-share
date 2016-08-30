@@ -1,0 +1,14 @@
+{{#if updateRenterForm}}
+<h2>Update your Profile:</h2>
+<form>
+  <div class="form-group">
+    <label for="username">Description</label>
+    {{input value=description id="description"}}
+    <label for="password">Image URL</label>
+    {{input value=image id="image"}}
+  </div>
+  <button {{action 'updateRenter' renter}}>Save</button>
+</form>
+{{else}}
+  <button {{action 'updateRenterFormShow'}}>Update your Profile</button>
+{{/if}}

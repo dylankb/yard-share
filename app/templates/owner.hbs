@@ -1,8 +1,12 @@
-{{owner-details owner=model}}
-{{listing-new owner=model saveListing="saveListing"}}
+<div class="container">
+  {{owner-details owner=model}}
+  <div class="listing-form col-sm-6">
+    {{listing-new owner=model saveListing="saveListing"}}
+  </div>
 
-<div class="owner-listing-tiles">
-  {{#each model.listings as |listing|}}
+  <div class="owner-listing-tiles">
+    {{#each model.listings as |listing|}}
     {{listing-tile listing=listing}}
-  {{/each}}
+    {{/each}}
+  </div>
 </div>

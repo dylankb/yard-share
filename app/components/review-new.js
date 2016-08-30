@@ -12,8 +12,8 @@ export default Ember.Component.extend({
         rating: this.get('rating'),
         text: this.get('text'),
         timestamp: Date.now(),
-        renter: "",
-        listing: this.get('listing')
+        renter: this.get('renter') || "",
+        listing: this.get('listing') || ""
       };
       this.sendAction('saveReview', params);
       this.set('addNewReview', false);

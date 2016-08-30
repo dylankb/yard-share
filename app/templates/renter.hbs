@@ -1,2 +1,8 @@
 {{renter-details renter=model}}
 {{renter-update renter=model updateRenter="updateRenter"}}
+
+<h4>User Reviews</h4>
+{{#each model.reviews as |review|}}
+  {{review-tile review=review}}
+{{/each}}
+{{review-new renter=model saveReview="saveReview"}}

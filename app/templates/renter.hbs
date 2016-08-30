@@ -7,3 +7,8 @@
   {{review-tile review=review}}
 {{/each}}
 {{review-new renter=model saveReview="saveReview"}}
+
+<h2>Bookings</h2>
+{{#each model.bookings as |booking|}}
+  {{booking-tile booking=booking}}
+{{/each}}

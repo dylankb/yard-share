@@ -12,8 +12,13 @@
       <label for="userType">Owner</label>
       <input type="radio" value="owner" id="userType" {{action 'setAccountType' on='change'}}>
     </div> -->
-    {{radio-button value='renter' checked=selectedType}}
-    {{radio-button value='owner' checked=selectedType}}
+    <div class="form-group">
+      <p>Account Type:</p>
+      <label for="userType">Renter</label>
+      {{radio-button value='renter' checked=userType}}
+      <label for="userType">Owner</label>
+      {{radio-button value='owner' checked=userType}}
+    </div>
 
   </div>
   <button {{action 'createAccount'}}>Sign Up</button>

@@ -11,6 +11,7 @@ export default Ember.Component.extend({
         description: ""
       };
       this.sendAction('createAccount', params);
+      debugger;
     }
   }
 });

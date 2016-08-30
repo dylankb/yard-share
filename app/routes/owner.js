@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       newListing.save().then(function(){
         return owner.save();
       });
-      this.transitionTo('owner', params.owner);
+      // this.transitionTo('index');
     },
     updateOwner(params) {
       var owner = params.owner;

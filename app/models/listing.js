@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -28,5 +29,13 @@ export default DS.Model.extend({
   grill: DS.attr(),
   bookings: DS.hasMany('booking', {async: true}),
   reviews: DS.hasMany('review', {async: true}),
-  owner: DS.belongsTo('owner', {async: true})
+  owner: DS.belongsTo('owner', {async: true}),
+
+  ratingAverage: Ember.computed('reviews.@each.rating', function(){
+    var total = 0;
+    (this.get('reviews')).forEach(function(review){
+      total += review.get('rating');
+    });
+    return Math.round(total/this.get('reviews').get('length'));
+  })
 });

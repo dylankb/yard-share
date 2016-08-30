@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   username: DS.attr(),
-  rating: DS.attr(),
+  rating: DS.attr('number'),
   text: DS.attr(),
   timestamp: new Date(),
   renter: DS.belongsTo('renter', {async: true}),

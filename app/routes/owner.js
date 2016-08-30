@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('owner', params.id);
+    return this.store.findRecord('owner', params.owner_id);
   },
   actions: {
     saveListing(params) {
@@ -13,7 +13,15 @@ export default Ember.Route.extend({
         return owner.save();
       });
       this.transitionTo('owner', params.owner);
+    },
+    updateOwner(params) {
+      var owner = params.owner;
+      Object.keys(params).forEach(function(key) {
+        if (params[key]!==undefined) {
+          owner.set(key, params[key]);
+        }
+      });
+      owner.save();
     }
   }
-
 });

@@ -1,0 +1,14 @@
+{{#if loginRenterForm}}
+  <h2>Log In to your Account:</h2>
+  <form>
+    <div class="form-group">
+      <label for="username">Username</label>
+      {{input value=username id="username"}}
+      <label for="password">Password</label>
+      {{input value=password id="password"}}
+    </div>
+    <button {{action 'renterLogin'}}>Log In</button>
+  </form>
+{{else}}
+  <button {{action 'loginRenterFormShow'}}>Log In As Renter</button>
+{{/if}}

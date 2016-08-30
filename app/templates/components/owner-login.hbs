@@ -1,0 +1,14 @@
+{{#if loginOwnerForm}}
+<h2>Log In to your Account:</h2>
+<form>
+  <div class="form-group">
+    <label for="username">Username</label>
+    {{input value=ownerUsername id="owner-username"}}
+    <label for="password">Password</label>
+    {{input value=ownerPassword id="owner-password"}}
+  </div>
+  <button {{action 'ownerLogin'}}>Log In</button>
+</form>
+{{else}}
+  <button {{action 'loginOwnerFormShow'}}>Log In as Owner</button>
+{{/if}}

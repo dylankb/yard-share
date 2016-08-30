@@ -17,6 +17,22 @@ export default Ember.Route.extend({
             self.transitionTo('error');
           }
         });
+    },
+    ownerLogin(params) {
+      var username = params.username;
+      var self = this;
+
+      this.store.query('owner', {
+      orderBy: 'username',
+      equalTo: username}).then(function(returnedOwners) {
+        if(returnedOwners.get('length') > 0) {
+          var owner = returnedOwners.get('firstObject');
+          self.transitionTo('owner', owner.id);
+          console.log("Success");
+        } else {
+          self.transitionTo('error');
+        }
+      });
     }
   }
 });

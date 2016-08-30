@@ -19,7 +19,7 @@ export default Ember.Route.extend({
         });
     },
     ownerLogin(params) {
-      var username = params.ownerUsername;
+      var username = params.username;
       var self = this;
 
       this.store.query('owner', {

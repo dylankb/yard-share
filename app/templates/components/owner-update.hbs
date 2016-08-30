@@ -1,0 +1,14 @@
+{{#if updateOwnerForm}}
+<h2>Update your Profile:</h2>
+<form>
+  <div class="form-group">
+    <label for="owner-description">Description</label>
+    {{input value=ownerDescription id="owner-description"}}
+    <label for="owner-image">Image URL</label>
+    {{input value=ownerImage id="owner-image"}}
+  </div>
+  <button {{action 'updateOwner' owner}}>Save</button>
+</form>
+{{else}}
+  <button {{action 'updateOwnerFormShow'}}>Update your Profile</button>
+{{/if}}

@@ -14,6 +14,8 @@ export default Ember.Component.extend({
       };
       this.set('loginOwnerForm', false);
       this.sendAction('ownerLogin', params);
+      this.set('ownerUsername', "");
+      this.set('ownerPassword', "");
     }
   }
 });

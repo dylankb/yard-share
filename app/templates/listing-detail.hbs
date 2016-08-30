@@ -1,0 +1,9 @@
+{{listing-details listing=model}}
+
+{{review-new listing=model saveReview="saveReview"}}
+
+<hr>
+
+{{#each model.reviews as |review|}}
+  {{review-tile review=review}}
+{{/each}}

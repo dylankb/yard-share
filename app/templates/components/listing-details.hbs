@@ -1,0 +1,75 @@
+<div class="col-sm-6">
+  <img src={{listing.image}} alt={{listing.title}} />
+</div>
+<div class="col-sm-6">
+  <h3>{{listing.title}}</h3>
+  <h5>
+    {{listing.neighborhood}}
+  </h5>
+  <p>
+    {{listing.description}}
+  </p>
+  <p>
+    {{listing.rate}}
+  </p>
+  <p>
+    {{listing.streetAddress}}
+  </p><br>
+  <p>
+    {{listing.city}}, {{listing.state}}
+  </p>
+  <h4>Guidelines:</h4>
+  <p>
+    {{listing.guidelines}}
+  </p>
+  <h4>Good for:</h4>
+  <ul>
+    {{#if listing.camping}}
+      <li>Camping </li>
+    {{/if}}
+    {{#if listing.gardening}}
+      <li>Gardening </li>
+    {{/if}}
+    {{#if listing.events}}
+      <li>Events </li>
+    {{/if}}
+  </ul>
+
+  <h4>Amenities</h4>
+  <ul>
+    {{#if listing.water}}
+      <li>Water </li>
+    {{/if}}
+    {{#if listing.pets}}
+      <li>pets </li>
+    {{/if}}
+    {{#if listing.bathroom}}
+      <li>bathroom </li>
+    {{/if}}
+    {{#if listing.parking}}
+      <li>parking </li>
+    {{/if}}
+    {{#if listing.alcohol}}
+      <li>alcohol </li>
+    {{/if}}
+    {{#if listing.smoking}}
+      <li>smoking </li>
+    {{/if}}
+    {{#if listing.wifi}}
+      <li>wifi </li>
+    {{/if}}
+    {{#if listing.fires}}
+      <li>fires </li>
+    {{/if}}
+    {{#if listing.rvHookup}}
+      <li>rvHookup </li>
+    {{/if}}
+    {{#if listing.electricity}}
+      <li>electricity </li>
+    {{/if}}
+    {{#if listing.grill}}
+      <li>grill </li>
+    {{/if}}
+  </ul>
+
+</div>

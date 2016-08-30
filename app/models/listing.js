@@ -14,6 +14,7 @@ export default DS.Model.extend({
   camping: DS.attr(),
   gardening: DS.attr(),
   events: DS.attr(),
+
   water: DS.attr(),
   pets: DS.attr(),
   bathroom: DS.attr(),

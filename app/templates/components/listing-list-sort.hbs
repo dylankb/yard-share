@@ -1,0 +1,13 @@
+<h1>Listings</h1>
+
+<h4>Sort listings by:</h4>
+<input type="checkbox" id=gardening {{action 'gardeningUse' on='change'}}>
+<label for="gardening">Gardening</label><br>
+<input type="checkbox" id=camping {{action 'campingUse' on='change'}}>
+<label for="camping">Camping</label><br>
+<input type="checkbox" id=events {{action 'eventsUse' on='change'}}>
+<label for="events">Events</label><br>
+
+{{#each listingsByUse as |listing|}}
+  {{listing-tile listing=listing}}
+{{/each}}

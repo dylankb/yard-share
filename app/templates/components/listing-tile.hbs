@@ -1,8 +1,10 @@
-<hr>
-{{#link-to 'listing-detail' listing.id}}<img src={{listing.image}} alt={{listing.title}} />
-<h3>{{listing.title}}</h3>{{/link-to}}
-<h5>${{listing.rate}} | {{listing.neighborhood}}</h5>
-<p>
-  {{listing.description}}
-</p>
-<h5>Average Rating: {{rating-stars listing.ratingAverage}}</h5>
+<div class="col-sm-4">
+  <hr>
+  {{#link-to 'listing-detail' listing.id}}<img src={{listing.image}} alt={{listing.title}} />
+  <h3>{{listing.title}}</h3>{{/link-to}}
+  <h5>${{listing.rate}} | {{listing.neighborhood}}</h5>
+  <p>
+    {{listing.description}}
+  </p>
+  <h5>Average Rating: {{rating-stars listing.ratingAverage}}</h5>
+</div>

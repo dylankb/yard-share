@@ -8,6 +8,8 @@ export default DS.Model.extend({
   image: DS.attr(),
   zipcode: DS.attr(),
   streetAddress: DS.attr(),
+  latitude: DS.attr('number'),
+  longitude: DS.attr('number'),
   city: DS.attr(),
   state: DS.attr(),
   neighborhood: DS.attr(),

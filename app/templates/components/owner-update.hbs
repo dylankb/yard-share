@@ -7,8 +7,8 @@
     <label for="owner-image">Image URL</label>
     {{input value=ownerImage id="owner-image"}}
   </div>
-  <button {{action 'updateOwner' owner}}>Save</button>
+  <button class="btn btn-default"{{action 'updateOwner' owner}}>Save</button>
 </form>
 {{else}}
-  <button {{action 'updateOwnerFormShow'}}>Update your Profile</button>
+  <button class="btn btn-default"{{action 'updateOwnerFormShow'}}>Update your Profile</button>
 {{/if}}

@@ -1,53 +1,92 @@
-<h3>Add a new listing</h3>
-<form >
-  <div class="form-group">
-    <label for="title">Title</label>
-    {{input id=title value="title" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="description">Description</label>
-    {{textarea id=description value="description" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="rate">Daily rate</label>
-    {{input id=rate value="rate" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="image">Image URL</label>
-    {{input id=image value="image" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="zipcode">Zipcode</label>
-    {{input id=zipcode value="zipcode" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="streetAddress">Street Address</label>
-    {{textarea id=streetAddress value="streetAddress" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="city">City</label>
-    {{input id=city value="city" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="state">State</label>
-    {{input id=state value="state" class="form-control"}}
-  </div>
-  <!-- MAKE THIS A DROPDOWN -->
-  <div class="form-group">
-    <label for="neighborhood">Neighborhood</label>
-    {{input id=neighborhood value="neighborhood" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="guidelines">Guidelines</label>
-    {{textarea id=guidelines value="guidelines" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <h4>Available Amenities (check all that apply):</h4>
-    <label for="camping">Camping</label>
-    {{input id=camping value="camping" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="state">State</label>
-    {{input id=state value="state" class="form-control"}}
-  </div>
-</form>
+{{#if showListingForm}}
+
+  <h3>Add a new listing</h3>
+  <form >
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input id="title" value=title class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{textarea id="description" value=description class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="rate">Daily rate</label>
+      {{input id="rate" value=rate class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      {{input id="image" value=image class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="zipcode">Zipcode</label>
+      {{input id="zipcode" value=zipcode class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="streetAddress">Street Address</label>
+      {{textarea id="streetAddress" value=streetAddress class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      {{input id="city" value=city class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      {{input id="state" value=state class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="neighborhood">Neighborhood</label>
+      {{#power-select
+      selected=neighborhood
+      options=neighborhoods
+      onchange=(action (mut neighborhood))
+      as |item|
+      }}
+      {{item}}
+      {{/power-select}}
+    </div>
+
+
+    <div class="form-group">
+      <label for="guidelines">Guidelines</label>
+      {{textarea id="guidelines" value=guidelines class="form-control"}}
+    </div>
+    <div class="form-group">
+      <h4>Available Amenities (check all that apply):</h4>
+      <input type="checkbox" id=water {{action 'addAmmenity' on='change'}}>
+      <label for="water">Water</label><br>
+      <input type="checkbox" id=pets {{action 'addAmmenity' on='change'}}>
+      <label for="pets">Pets ok</label><br>
+      <input type="checkbox" id=bathroom {{action 'addAmmenity' on='change'}}>
+      <label for="bathroom">Bathroom</label><br>
+      <input type="checkbox" id=parking {{action 'addAmmenity' on='change'}}>
+      <label for="parking">Parking</label><br>
+      <input type="checkbox" id=alcohol {{action 'addAmmenity' on='change'}}>
+      <label for="alcohol">Alcohol is ok</label><br>
+      <input type="checkbox" id=smoking {{action 'addAmmenity' on='change'}}>
+      <label for="smoking">Smoking</label><br>
+      <input type="checkbox" id=wifi {{action 'addAmmenity' on='change'}}>
+      <label for="wifi">Wifi</label><br>
+      <input type="checkbox" id=fires {{action 'addAmmenity' on='change'}}>
+      <label for="fires">Fires</label><br>
+      <input type="checkbox" id=rvHookup {{action 'addAmmenity' on='change'}}>
+      <label for="rvHookup">RV hookup</label><br>
+      <input type="checkbox" id=electricity {{action 'addAmmenity' on='change'}}>
+      <label for="electricity">Electricity</label><br>
+      <input type="checkbox" id=grill {{action 'addAmmenity' on='change'}}>
+      <label for="grill">Grill</label>
+    </div>
+    <div class="form-group">
+      <h4>This property is good for (check all that apply):</h4>
+      <input type="checkbox" id=camping {{action 'addUsage' on='change'}}>
+      <label for="camping">Camping</label><br>
+      <input type="checkbox" id=gardening {{action 'addUsage' on='change'}}>
+      <label for="gardening">Gardening</label><br>
+      <input type="checkbox" id=events {{action 'addUsage' on='change'}}>
+      <label for="events">Events</label><br>
+    </div>
+    <button class="btn btn-default" {{action 'saveListing'}}>Save</button>
+  </form>
+{{else}}
+  <button class="btn btn-default" {{action 'showListingForm'}}>Add a listing</button>
+{{/if}}

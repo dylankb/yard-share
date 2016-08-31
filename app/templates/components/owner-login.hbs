@@ -7,8 +7,8 @@
     <label for="password">Password</label>
     {{input value=ownerPassword id="owner-password"}}
   </div>
-  <button {{action 'ownerLogin'}}>Log In</button>
+  <button class="btn btn-default"{{action 'ownerLogin'}}>Log In</button>
 </form>
 {{else}}
-  <button {{action 'loginOwnerFormShow'}}>Log In as Owner</button>
+  <button class="btn btn-default"{{action 'loginOwnerFormShow'}}>Log In as Owner</button>
 {{/if}}

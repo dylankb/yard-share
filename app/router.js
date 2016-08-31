@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('renter', {path: '/renter/:renter_id'});
   this.route('log-in');
   this.route('error');
+  this.route('renters');
 });
 
 export default Router;

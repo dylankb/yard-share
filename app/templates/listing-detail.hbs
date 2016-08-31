@@ -1,11 +1,11 @@
-{{listing-details listing=model}}
+{{listing-details listing=model.listing}}
 
-{{review-new listing=model saveReview="saveReview"}}
+{{review-new listing=model.listing saveReview="saveReview"}}
 
 <hr>
 
-{{#each model.reviews as |review|}}
+{{#each model.listing.reviews as |review|}}
   {{review-tile review=review}}
 {{/each}}
 
-{{booking-new listing=model saveBooking="saveBooking"}}
+{{booking-new listing=model.listing saveBooking="saveBooking"}}

@@ -2,17 +2,26 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('listing', params.listing_id);
+    return Ember.RSVP.hash({
+      listing: this.store.findRecord('listing', params.listing_id),
+      renters: this.store.findAll('renter')
+    });
   },
   actions: {
     saveReview(params) {
+      var renters = this.modelFor('listing-detail').renters;
+      for(var renter of renters.toArray()) {
+        if(renter.get('username') === params.reviewer) {
+          params.reviewer_id = renter.id;
+        }
+      }
       var newReview = this.store.createRecord('review', params);
       var listing = params.listing;
       listing.get('reviews').addObject(newReview);
       newReview.save().then(function(){
         return listing.save();
       });
-      this.transitionTo('listing', params.listing);
+      // this.transitionTo('listing', params.listing);
     },
     saveBooking(params) {
       var booker = params.booker;

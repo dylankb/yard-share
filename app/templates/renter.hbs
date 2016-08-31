@@ -1,7 +1,8 @@
 {{renter-details renter=model}}
 {{renter-update renter=model updateRenter="updateRenter"}}
 
-<h4>User Reviews</h4>
+<h2>User Reviews</h2>
+<h5>Average Rating: {{rating-stars model.ratingAverage}}</h5>
 <hr>
 {{#each model.reviews as |review|}}
   {{review-tile review=review}}

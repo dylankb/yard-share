@@ -9,3 +9,8 @@ img {
 .btn-default {
   margin-top: 10px;
 }
+
+.reviewer-icon {
+  width: 50px;
+  height: 100%;
+}

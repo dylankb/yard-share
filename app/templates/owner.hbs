@@ -1,15 +1,17 @@
 <div class="container">
-  {{owner-details owner=model}}
-  <div class="listing-form col-sm-6">
+  <div class="listing-form row">
+    {{owner-details owner=model}}
     {{listing-new owner=model saveListing="saveListing"}}
+    {{owner-update owner=model updateOwner="updateOwner"}}
+    <h3>My listings:</h3>
+    <hr>
   </div>
 
-{{owner-update owner=model updateOwner="updateOwner"}}
 
-  <div class="owner-listing-tiles">
+  <div class="owner-listing-tiles col-sm-12">
     {{#each model.listings as |listing|}}
-    {{listing-tile listing=listing}}
-    {{listing-update listing=listing updateListing="updateListing" destroyListing="destroyListing"}}
+      {{listing-tile listing=listing}}
+      {{listing-update listing=listing updateListing="updateListing" destroyListing="destroyListing"}}
     {{/each}}
   </div>
 </div>

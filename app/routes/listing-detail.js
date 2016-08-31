@@ -7,6 +7,7 @@ export default Ember.Route.extend({
       renters: this.store.findAll('renter')
     });
   },
+
   actions: {
     saveReview(params) {
       var renters = this.modelFor('listing-detail').renters;

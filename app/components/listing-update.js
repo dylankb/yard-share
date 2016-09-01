@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   showListingForm: false,
   neighborhoods: ["Downtown", "Pearl District", "Old Chinatown", "NW Portland/Nob Hill", "Lloyd District", "Mississippi/Williams", "Alberta Arts District", "Division/Clinton", "Belmont", "Hawthorne", "Sellwood-Moreland"],
-  
 
   actions: {
     showListingForm() {

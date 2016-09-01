@@ -2,6 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewBooking: false,
+  useArray: [],
+  usesArray: Ember.computed('listing.camping', 'listing.gardening', 'listing.events', 'useArray', function(){
+    if (this.get('listing.camping')) {
+      this.get('useArray').push('camping');
+    }
+    if (this.get('listing.gardening')) {
+      this.get('useArray').push('gardening');
+    }
+    if (this.get('listing.events')) {
+      this.get('useArray').push('events');
+    }
+    return this.get('useArray');
+  }),
   actions: {
     saveBooking() {
       var params = {

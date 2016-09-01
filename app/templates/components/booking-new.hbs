@@ -2,7 +2,14 @@
 <form>
   <div class="form-group">
     <label for=use>Use</label>
-    {{input value=use id="use"}}
+    {{#power-select
+      selected=use
+      options=usesArray
+      onchange=(action (mut use))
+      as |item|
+    }}
+    {{item}}
+    {{/power-select}}
   </div>
   <div class="form-group">
     <label for=details>details</label>

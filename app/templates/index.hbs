@@ -1,7 +1,1 @@
-<div class="col-sm-4 listing-list">
-  {{#each model as |listing|}}
-    {{listing-tile listing=listing}}
-  {{/each}}
-</div>
-
-<button class="btn" {{action 'listing'}}>Browse all listings</button>
+{{listing-list-sort listings=model}}

@@ -30,7 +30,14 @@
     </div>
     <div class="form-group">
       <label for="neighborhood">Neighborhood</label>
-      {{input id="neighborhood" value=neighborhood placeholder=listing.neighborhood class="form-control"}}
+      {{#power-select
+      selected=neighborhood
+      options=neighborhoods
+      onchange=(action (mut neighborhood))
+      as |item|
+      }}
+      {{item}}
+      {{/power-select}}
     </div>
     <div class="form-group">
       <label for="guidelines">Guidelines</label>

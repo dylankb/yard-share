@@ -40,6 +40,8 @@ export default Ember.Component.extend({
         image4: this.get('image4') ? this.get('image4'): "",
         zipcode: this.get('zipcode') ? this.get('zipcode'): "",
         streetAddress: this.get('streetAddress') ? this.get('streetAddress'): "",
+        latitude: this.get('latitude'),
+        longitude: this.get('longitude'),
         city: this.get('city') ? this.get('city'): "",
         state: this.get('state') ? this.get('state'): "",
         neighborhood: this.get('neighborhood') ? this.get('neighborhood'): "",

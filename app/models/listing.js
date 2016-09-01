@@ -7,6 +7,8 @@ export default DS.Model.extend({
   rate: DS.attr(),
   zipcode: DS.attr(),
   streetAddress: DS.attr(),
+  latitude: DS.attr('number'),
+  longitude: DS.attr('number'),
   city: DS.attr(),
   state: DS.attr(),
   neighborhood: DS.attr(),
@@ -33,6 +35,8 @@ export default DS.Model.extend({
   image2: DS.attr(),
   image3: DS.attr(),
   image4: DS.attr(),
+
+
 
 
   ratingAverage: Ember.computed('reviews.@each.rating', function(){

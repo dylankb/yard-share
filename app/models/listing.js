@@ -37,8 +37,6 @@ export default DS.Model.extend({
   image4: DS.attr(),
 
 
-
-
   ratingAverage: Ember.computed('reviews.@each.rating', function(){
     var total = 0;
     (this.get('reviews')).forEach(function(review){

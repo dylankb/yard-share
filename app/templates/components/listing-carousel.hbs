@@ -1,7 +1,6 @@
-{{listing-carousel model=listng}}
 {{#carousel-container}}
   {{#carousel-body}}
-    {{#each model as |listing|}}
+    {{#each listing as |listing|}}
       {{#carousel-item}}
       {{#link-to 'listing-detail' listing.id}}
       <div class="caro-img">
@@ -20,10 +19,3 @@
     <span class="glyphicon glyphicon-menu-right"></span>
   {{/carousel-arrow}}
 {{/carousel-container}}
-<div class="col-sm-4 listing-list">
-  {{#each model as |listing|}}
-    {{listing-tile listing=listing}}
-  {{/each}}
-</div>
-
-<button class="btn" {{action 'listing'}}>Browse all listings</button>

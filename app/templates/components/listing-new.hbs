@@ -15,10 +15,6 @@
       {{input id="rate" value=rate class="form-control"}}
     </div>
     <div class="form-group">
-      <label for="image">Image URL</label>
-      {{input id="image" value=image class="form-control"}}
-    </div>
-    <div class="form-group">
       <label for="zipcode">Zipcode</label>
       {{input id="zipcode" value=zipcode class="form-control"}}
     </div>
@@ -84,6 +80,28 @@
       <label for="gardening">Gardening</label><br>
       <input type="checkbox" id=events {{action 'addUsage' on='change'}}>
       <label for="events">Events</label><br>
+      <h5>Have Multiple Images? Put them in below.</h5>
+      <div class="form-group">
+        <label for="image1">Image URL</label>
+        {{input id="image1" value=image1 class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="image23">Image URL</label>
+        {{input id="image2" value=image2 class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="image3">Image URL</label>
+        {{input id="image3" value=image3 class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="image45">Image URL</label>
+        {{input id="image4" value=image4 class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="image5">Image URL</label>
+        {{input id="image5" value=image5 class="form-control"}}
+      </div>
+      <h5></h5>
     </div>
     <button class="btn btn-default" {{action 'saveListing'}}>Save</button>
   </form>

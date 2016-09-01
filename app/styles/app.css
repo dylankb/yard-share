@@ -1,3 +1,7 @@
+html {
+  background-color: #F3F9FF;
+}
+
 h2 {
   font-family: "proxima-nova",sans-serif;
 }
@@ -48,6 +52,7 @@ img {
   /*background-color: #09447F;*/
   margin-bottom: 0;
   color: #09447F;
+
 }
 
 .navbar a:hover {

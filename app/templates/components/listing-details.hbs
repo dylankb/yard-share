@@ -1,21 +1,19 @@
-<div class="col-sm-6">
-  <img src={{listing.image}} alt={{listing.title}} />
-</div>
+{{listing-carousel images=listing.imageArray}}
+
 <div class="col-sm-6">
   <h3>{{listing.title}}</h3>
-  <h5>
+  <h4>
     {{listing.neighborhood}}
-  </h5>
+  </h4>
   <p>
-    {{listing.description}}
+    <strong>About this listing:</strong> {{listing.description}}
   </p>
   <p>
-    {{listing.rate}}
+    <strong>Rate:</strong> ${{listing.rate}}/day
   </p>
   <p>
     {{listing.streetAddress}}
-  </p><br>
-  <p>
+  <br>
     {{listing.city}}, {{listing.state}}
   </p>
   <h4>Guidelines:</h4>

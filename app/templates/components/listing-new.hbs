@@ -15,10 +15,6 @@
       {{input id="rate" value=rate class="form-control"}}
     </div>
     <div class="form-group">
-      <label for="image">Image URL</label>
-      {{input id="image" value=image class="form-control"}}
-    </div>
-    <div class="form-group">
       <label for="zipcode">Zipcode</label>
       {{input id="zipcode" value=zipcode class="form-control"}}
     </div>
@@ -91,10 +87,30 @@
       <input type="checkbox" id=gardening {{action 'addUsage' on='change'}}>
       <label for="gardening">Gardening</label><br>
       <input type="checkbox" id=events {{action 'addUsage' on='change'}}>
-      <label for="events">Events</label><br>
+      <label for="events">Events</label>
+      <h5>Have Multiple Images? Put them in below.</h5>
+      <hr>
+      <div class="form-group">
+        <label for="image1">Featured Image URL (choose wisely- this will be your featured image!)</label>
+        {{input id="image1" value=image1 class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="image2">Image URL</label>
+        {{input id="image2" value=image2 class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="image3">Image URL</label>
+        {{input id="image3" value=image3 class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="image4">Image URL</label>
+        {{input id="image4" value=image4 class="form-control"}}
+      </div>
     </div>
     <button class="btn btn-default" {{action 'saveListing'}}>Save</button>
   </form>
+  <br>
 {{else}}
   <button class="btn btn-default" {{action 'showListingForm'}}>Add a listing</button>
+  <br>
 {{/if}}

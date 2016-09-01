@@ -1,3 +1,18 @@
+h2 {
+  font-family: "proxima-nova",sans-serif;
+}
+
+h3 {
+  font-family: "proxima-nova",sans-serif;
+}
+h4 {
+  font-family: "proxima-nova",sans-serif;
+}
+
+p {
+  font-family: "proxima-nova",sans-serif;
+}
+
 .push-down {
   margin-top: 4em;
 }
@@ -14,4 +29,76 @@ img {
   width: 600px;
   height: 600px;
   margin: 20px;
+}
+
+.jumbotron {
+  background-image: url("/images/yard_banner_edit.jpg");
+  text-align: center;
+  color: white;
+  height: 300px;
+  background-size: cover;
+  margin-top: 0;
+}
+
+.jumbotron h1 {
+  font-size: 84px;
+}
+
+.navbar {
+  /*background-color: #09447F;*/
+  margin-bottom: 0;
+  color: #09447F;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.headline {
+  width: 50%;
+  height: 75%;
+  margin: 50px auto 50px auto;
+  /*background-color: #09447F;*/
+  border-radius: 30px;
+  padding: 1%;
+  opacity: .9;
+}
+
+.headline p {
+  font-size: 18px;
+  font: "proxima-nova";
+  letter-spacing: .9px;
+}
+
+.navbar-brand {
+  font-family: "spumante",sans-serif;
+  font-size: 1.75em;
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+h1 {
+  font-family: "spumante",sans-serif;
+  font-weight: black;
+}
+
+body {
+  font: "proxima-nova";
+}
+
+.col-sm-6 {
+  margin-top: 0;
+}
+
+.neighborhood-sort {
+  margin-top: 20px;
+}
+
+.pipes {
+  opacity: .2;
+  margin-left: 10px;
+  margin-right: 7px;
 }

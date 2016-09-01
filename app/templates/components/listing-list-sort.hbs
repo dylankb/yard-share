@@ -1,33 +1,28 @@
-<h1>Browse Listings</h1>
 
-<h4>Sort by use:</h4>
-<input type="checkbox" id="gardening" checked=checked {{action 'gardeningUse' on='change'}}>
-<label for="gardening">Gardening</label><br>
-<input type="checkbox" id="camping" checked=checked {{action 'campingUse' on='change'}}>
-<label for="camping">Camping</label><br>
-<input type="checkbox" id="events" checked=checked {{action 'eventsUse' on='change'}}>
-<label for="events">Events</label><br>
-
-<hr>
-
-<h4>Sort by neighborhood:</h4>
-<div class="form-group">
-  <label for="neighborhoodChosen">Neighborhoods</label>
-  {{#power-select
-  selected=showNeighborhood
-  options=neighborhoods
-  onchange=(action (mut showNeighborhood))
-  as |item|
-  }}
-  {{item}}
-  {{/power-select}}
+<div class="row">
+  <div class="col-sm-6">
+    <h3>Browse Listings</h3>
+    <input type="checkbox" id="gardening" checked=checked {{action 'gardeningUse' on='change'}}>
+    <label for="gardening">Gardening<span class="pipes">|</span></label>
+    <input type="checkbox" id="camping" checked=checked {{action 'campingUse' on='change'}}>
+    <label for="camping">Camping<span class="pipes">|</span></label>
+    <input type="checkbox" id="events" checked=checked {{action 'eventsUse' on='change'}}>
+    <label for="events">Events</label>
+    <div class="form-group neighborhood-sort">
+      <label for="neighborhoodChosen">Neighborhood</label>
+      {{#power-select
+        selected=showNeighborhood
+        options=neighborhoods
+        onchange=(action (mut showNeighborhood))
+        as |item|
+      }}
+      {{item}}
+      {{/power-select}}
+    </div>
+  </div>
 </div>
 
-<!-- <input type="checkbox" id="downtown" {{action 'chooseNeighborhood' on='change'}}>
-<label for="downtown">Downtown</label><br>
-<input type="checkbox" id="NW Portland/Nob Hill" {{action 'chooseNeighborhood' on='change'}}>
-<label for="NW Portland/Nob Hill">NW Portland/Nob Hill</label><br> -->
-
+<hr>
 
 {{#each listingsByUse as |listing|}}
   {{listing-tile listing=listing}}

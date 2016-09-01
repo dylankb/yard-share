@@ -15,7 +15,7 @@ if(rating === 1){
     return Ember.String.htmlSafe('<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>');
   }
   else {
-    return Ember.String.htmlSafe('<span>Not yet rated</span>');
+    return Ember.String.htmlSafe('<p>Not yet rated</p>');
   }
 }
 

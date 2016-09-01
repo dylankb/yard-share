@@ -8,21 +8,22 @@ export default Ember.Object.extend({
     this.set('geocoder', new google.maps.Geocoder());
   },
   //
-  // createMap(element, location) {
-  //   let map = new google.maps.Map(element, { scrollwheel: false, zoom: 10 });
-  //   this.pinLocation(location, map);
-  //   return map;
-  // },
-  //
-  // pinLocation(location, map) {
-  //   this.get('geocoder').geocode({address: location}, (result, status) => {
-  //     if (status === google.maps.GeocoderStatus.OK) {
-  //       let location = result[0].geometry.location;
-  //       let position = { lat: location.lat(), lng: location.lng() };
-  //       map.setCenter(position);
-  //       new google.maps.Marker({ position, map, title: location });
-  //     }
-  //   });
-  // }
+  createMap(element, location) {
+    let map = new google.maps.Map(element, { scrollwheel: false, zoom: 10 });
+    debugger;
+    this.pinLocation(location, map);
+    return map;
+  },
+
+  pinLocation(location, map) {
+    this.get('geocoder').geocode({address: location}, (result, status) => {
+      if (status === google.maps.GeocoderStatus.OK) {
+        let location = result[0].geometry.location;
+        let position = { lat: location.lat(), lng: location.lng() };
+        map.setCenter(position);
+        new google.maps.Marker({ position, map, title: location });
+      }
+    });
+  }
 
 });

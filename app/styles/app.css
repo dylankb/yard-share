@@ -10,7 +10,7 @@ img {
   margin-top: 10px;
 }
 
-.map-display {
+.map-display, .map-container {
   width: 600px;
   height: 600px;
   margin: 20px;

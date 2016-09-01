@@ -23,4 +23,17 @@ export default Ember.Component.extend({
       infowindow.open(newMap, marker);
     });
   }
+
+
+
+
+
+  // maps: Ember.inject.service('google-map'),
+  //
+  // didInsertElement() {
+  //   this._super(...arguments);
+  //   let location = this.get('location');
+  //   let mapElement = this.get('maps').getMapElement(location);
+  //   this.$('.map-container').append(mapElement);
+  // }
 });

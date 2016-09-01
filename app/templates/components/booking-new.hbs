@@ -2,7 +2,14 @@
 <form>
   <div class="form-group">
     <label for=use>Use</label>
-    {{input value=use id="use"}}
+    {{#power-select
+      selected=use
+      options=usesArray
+      onchange=(action (mut use))
+      as |item|
+    }}
+    {{item}}
+    {{/power-select}}
   </div>
   <div class="form-group">
     <label for=details>details</label>
@@ -16,8 +23,8 @@
     <label for=booker>Your Username</label>
     {{input value=booker id="booker"}}
   </div>
-  <button class="btn btn-default"{{action 'saveBooking' listing}}>Save Booking</button>
+  <button class="btn btn-default" {{action 'saveBooking' listing}}>Save Booking</button>
 </form>
 {{else}}
-<button class="btn btn-default"{{action 'revealAddNewBooking'}}>Book!</button>
+<button class="btn btn-default" {{action 'revealAddNewBooking'}}>Book!</button>
 {{/if}}

@@ -1,4 +1,5 @@
-<h5>Reviewed by: {{review.username}}</h5>
+<h5>Reviewed by: {{#link-to 'renter' review.reviewer_id}}{{review.reviewer}}{{/link-to}}</h5>
+{{log review.renterObject}}
 <h5>Rating: {{rating-stars review.rating}}</h5>
 <blockquote>{{review.text}}</blockquote>
 <p>

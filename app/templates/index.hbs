@@ -1,25 +1,3 @@
-{{listing-carousel model=listng}}
-{{#carousel-container}}
-  {{#carousel-body}}
-    {{#each model as |listing|}}
-      {{#carousel-item}}
-      {{#link-to 'listing-detail' listing.id}}
-      <div class="caro-img">
-        <img class="img-responsive" src="{{listing.image}}" alt="listing image" />
-      </div>
-      {{/link-to}}
-      {{/carousel-item}}
-    {{/each}}
-  {{/carousel-body}}
-
-  {{#carousel-arrow direction="left" class="carousel-control line-arrow left"}}
-    <span class="glyphicon glyphicon-menu-left"></span>
-  {{/carousel-arrow}}
-
-  {{#carousel-arrow direction="right" class="carousel-control line-arrow right"}}
-    <span class="glyphicon glyphicon-menu-right"></span>
-  {{/carousel-arrow}}
-{{/carousel-container}}
 <div class="col-sm-4 listing-list">
   {{#each model as |listing|}}
     {{listing-tile listing=listing}}

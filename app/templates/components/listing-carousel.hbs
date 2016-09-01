@@ -1,0 +1,20 @@
+{{log images}}
+{{#carousel-container}}
+  {{#carousel-body}}
+    {{#each images as |image|}}
+      {{#carousel-item}}
+      <div class="caro-img">
+        <img class="img-responsive carousel-image" src={{image}} alt="listing image" />
+      </div>
+      {{/carousel-item}}
+    {{/each}}
+  {{/carousel-body}}
+
+  {{#carousel-arrow direction="left" class="carousel-control line-arrow left"}}
+    <span class="glyphicon glyphicon-menu-left"></span>
+  {{/carousel-arrow}}
+
+  {{#carousel-arrow direction="right" class="carousel-control line-arrow right"}}
+    <span class="glyphicon glyphicon-menu-right"></span>
+  {{/carousel-arrow}}
+{{/carousel-container}}

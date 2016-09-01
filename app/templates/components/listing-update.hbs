@@ -13,10 +13,6 @@
       {{input id="rate" value=rate placeholder=listing.rate class="form-control"}}
     </div>
     <div class="form-group">
-      <label for="image">Image URL</label>
-      {{input id="image" value=image placeholder=listing.image class="form-control"}}
-    </div>
-    <div class="form-group">
       <label for="zipcode">Zipcode</label>
       {{input id="zipcode" value=zipcode placeholder=listing.zipcode class="form-control"}}
     </div>
@@ -79,12 +75,32 @@
       <input type="checkbox" id=gardening checked={{listing.gardening}} {{action 'addUsage' on='change'}}>
       <label for="gardening">Gardening</label><br>
       <input type="checkbox" id=events checked={{listing.events}} {{action 'addUsage' on='change'}}>
-      <label for="events">Events</label><br>
+      <label for="events">Events</label>
+      <h5>Have Multiple Images? Put them in below.</h5>
+      <hr>
+      <div class="form-group">
+        <label for="image1">Featured Image URL (choose wisely- this will be your featured image!)</label>
+        {{input id="image1" value=image1 class="form-control" placeholder=listing.image1}}
+      </div>
+      <div class="form-group">
+        <label for="image2">Image URL</label>
+        {{input id="image2" value=image2 class="form-control" placeholder=listing.image2}}
+      </div>
+      <div class="form-group">
+        <label for="image3">Image URL</label>
+        {{input id="image3" value=image3 class="form-control" placeholder=listing.image3}}
+      </div>
+      <div class="form-group">
+        <label for="image4">Image URL</label>
+        {{input id="image4" value=image4 class="form-control" placeholder=listing.image4}}
+      </div>
     </div>
     <button class="btn btn-default" {{action 'updateListing' listing}}>Save Update</button>
     <button class="btn btn-default" {{action 'hideListingForm'}}>Cancel</button>
   </form>
+  <br>
 {{else}}
   <button class="btn btn-default"{{action 'showListingForm'}}>Update listing</button>
   <button class="btn btn-default" {{action 'deleteListing' listing}}>Delete listing</button>
+  <br>
 {{/if}}

@@ -1,12 +1,11 @@
+{{log images}}
 {{#carousel-container}}
   {{#carousel-body}}
-    {{#each listing as |listing|}}
+    {{#each images as |image|}}
       {{#carousel-item}}
-      {{#link-to 'listing-detail' listing.id}}
       <div class="caro-img">
-        <img class="img-responsive" src="{{listing.image}}" alt="listing image" />
+        <img class="img-responsive carousel-image" src={{image}} alt="listing image" />
       </div>
-      {{/link-to}}
       {{/carousel-item}}
     {{/each}}
   {{/carousel-body}}

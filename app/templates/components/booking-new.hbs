@@ -16,8 +16,8 @@
     <label for=booker>Your Username</label>
     {{input value=booker id="booker"}}
   </div>
-  <button {{action 'saveBooking' listing}}>Save Booking</button>
+  <button class="btn btn-default" {{action 'saveBooking' listing}}>Save Booking</button>
 </form>
 {{else}}
-<button {{action 'revealAddNewBooking'}}>Book!</button>
+<button class="btn btn-default" {{action 'revealAddNewBooking'}}>Book!</button>
 {{/if}}

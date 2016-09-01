@@ -33,7 +33,6 @@ export default DS.Model.extend({
   image2: DS.attr(),
   image3: DS.attr(),
   image4: DS.attr(),
-  image5: DS.attr(),
 
 
   ratingAverage: Ember.computed('reviews.@each.rating', function(){
@@ -44,19 +43,20 @@ export default DS.Model.extend({
     return Math.round(total/this.get('reviews').get('length'));
   }),
 
-  // imageArray: Ember.computed('image1', 'image2', 'image3', 'image4', 'image 5', function(){
-  //   var images = [];
-  //   if (this.get('image1') !== "") {
-  //     images.push(this.get('image1'));
-  //   } else if (this.get(('image2')) !== ""){
-  //     images.push(this.get('image2'));
-  //   } else if (this.get('image3') !== ""){
-  //     images.push(this.get('image3'));
-  //   } else if (this.get(('image4')) !== ""){
-  //     images.push(this.get('image4'));
-  //   } else if (this.get('image5') !== ""){
-  //     images.push(this.get('image5'));
-  //   }
-  //   return images;
-  // })
+  imageArray: Ember.computed('image1', 'image2', 'image3', 'image4', function(){
+    var images = [];
+    if (this.get('image1') !== "") {
+      images.push(this.get('image1'));
+    }
+    if (this.get(('image2')) !== ""){
+      images.push(this.get('image2'));
+    }
+    if (this.get('image3') !== ""){
+      images.push(this.get('image3'));
+    }
+     if (this.get(('image4')) !== ""){
+      images.push(this.get('image4'));
+    }
+    return images;
+  })
 });

@@ -8,6 +8,7 @@ h2 {
 
 h3 {
   font-family: "proxima-nova",sans-serif;
+  color: #334f84;
 }
 h4 {
   font-family: "proxima-nova",sans-serif;
@@ -29,20 +30,18 @@ h1 {
   height: 300px;
   background-size: cover;
   margin-top: 0;
+  margin-bottom: 0;
+  height: 350px;
 }
 .jumbotron h1 {
   font-size: 84px;
 }
 
 .navbar {
-  /*background-color: #09447F;*/
+  background-color: #09447F;
   margin-bottom: 0;
   color: #09447F;
 
-}
-
-.navbar a:hover {
-  color: white;
 }
 
 .headline {
@@ -61,14 +60,36 @@ h1 {
   letter-spacing: .9px;
 }
 
-.navbar-brand {
+.navbar-default .navbar-brand {
   font-family: "spumante",sans-serif;
   font-size: 1.75em;
   color: white;
 }
+.navbar-default .navbar-brand:hover {
+  font-family: "spumante",sans-serif;
+  font-size: 1.75em;
+  color: #ffe6ac;
+}
 
-.navbar-brand {
-  color: white;
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    font-family: "proxima-nov",sans-serif;
+}
+.nav.navbar-nav.navbar-right li a:hover {
+    color: #ffe6ac;
+}
+
+.col-sm-5 {
+  margin-top: 30px;
+  margin-left: 7%;
+}
+
+.col-sm-6 {
+  margin-top: 40px;
+}
+
+img {
+  margin-bottom: 2em;
 }
 
 
@@ -76,12 +97,19 @@ body {
   font: "proxima-nova";
 }
 
+.browse {
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 1.5%;
+}
+
 .col-sm-6 {
   margin-top: 0;
+  padding-top: 2%;
 }
 
 .neighborhood-sort {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .pipes {
@@ -90,7 +118,7 @@ body {
   margin-right: 7px;
 }
 .push-down {
-  margin-top: 4em;
+  margin-top: 2em;
 }
 
 img {
@@ -99,6 +127,78 @@ img {
 
 .btn-default {
   margin-top: 10px;
+}
+
+.background-image {
+  background-image: url("/images/greenspace.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: static;
+  top: 0;
+  left: 0;
+}
+
+.login-div {
+  background-color: white;
+  width: 30%;
+  margin-left: 2%;
+  margin-right: 18%;
+  margin-top: 20%;
+  padding: 2% 5% 4% 5%;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  background-size: cover;
+  margin-bottom: 30px;
+  opacity: .85;
+}
+
+.login-div-left {
+  background-color: white;
+  width: 30%;
+  margin-left: 18%;
+  margin-right: 2%;
+  margin-top: 20%;
+  padding: 2% 5% 4% 5%;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  background-size: cover;
+  margin-bottom: 30px;
+  opacity: .85;
+}
+
+.btn-default {
+  background: white;
+  color: #334f84;
+  outline-color: #334f84;
+}
+
+.renter {
+  width: 100%;
+  margin-left: 0;
+}
+
+.renter-profile {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.btn-default:hover {
+  background-color: #334f84;
+  color: white;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, btn-default.active {
+  outline-color: #09447F;
+}
+
+label {
+  margin-top: 10px;
+  color: #334f84;
 }
 
 .caro-img {

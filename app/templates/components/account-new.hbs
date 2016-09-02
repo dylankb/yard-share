@@ -6,12 +6,11 @@
     <label for="password">Password</label>
     {{input value=password id="password"}}
     <div class="form-group">
-      <p>Account Type:</p>
-      <label for="userType">Renter</label>
       {{radio-button value='renter' checked=userType}}
-      <label for="userType">Owner</label>
+      <label for="userType">Renter Account</label><span class="pipes">|</span>
       {{radio-button value='owner' checked=userType}}
+      <label for="userType">Owner Account</label>
     </div>
   </div>
-  <button class="btn btn-default"{{action 'createAccount'}}>Sign Up</button>
+  <button class="btn btn-success"{{action 'createAccount'}}>Sign Up</button>
 </form>

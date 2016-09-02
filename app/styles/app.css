@@ -221,9 +221,10 @@ label {
 }
 .carousel-control .glyphicon-menu-left:before {
   margin-left:0;
+}
 
-.map-display, .map-container {
-  width: 600px;
-  height: 600px;
-  margin: 20px;
+.map-display {
+  width: 450px;
+  height: 450px;
+  margin: 80px;
 }

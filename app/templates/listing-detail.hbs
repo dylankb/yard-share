@@ -1,8 +1,10 @@
 <div class="container push-down">
 
-  {{listing-details listing=model.listing}}
+  <div class="row">
+    {{listing-details listing=model.listing}}
 
-  {{google-map listing=model.listing location=model.listing.streetAddress}}
+    {{google-map listing=model.listing location=model.listing.streetAddress}}
+  </div>
 
 <div class="col-sm-5">
   {{review-new listing=model.listing saveReview="saveReview"}}

@@ -3,9 +3,11 @@
 <form>
   <div class="form-group">
     <label for="username">Username</label>
-    {{input value=ownerUsername id="owner-username"}}<br>
+    {{input value=ownerUsername id="owner-username" class="form-control"}}
+  </div>
+  <div class="form-group">
     <label for="password">Password</label>
-    {{input type="password" value=ownerPassword id="owner-password"}}
+    {{input type="password" value=ownerPassword id="owner-password" class="form-control"}}
   </div>
   <button class="btn btn-default"{{action 'ownerLogin'}}>Log In as Owner</button>
 </form>

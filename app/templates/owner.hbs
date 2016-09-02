@@ -9,9 +9,12 @@
 
 
   <div class="owner-listing-tiles col-sm-12">
-    {{#each model.listings as |listing|}}
+    <div class="col-sm-4">
+      {{#each model.listings as |listing|}}
       {{listing-tile listing=listing}}
       {{listing-update listing=listing updateListing="updateListing" destroyListing="destroyListing"}}
-    {{/each}}
+      {{/each}}
+      <hr>
+    </div>
   </div>
 </div>

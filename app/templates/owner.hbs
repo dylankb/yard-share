@@ -16,12 +16,12 @@
 
 
   <div class="owner-listing-tiles col-sm-12">
-    <div class="col-sm-4">
       {{#each model.listings as |listing|}}
-      {{listing-tile listing=listing}}
-      {{listing-update listing=listing updateListing="updateListing" destroyListing="destroyListing"}}
+      <div class="col-sm-4">
+        {{listing-tile listing=listing}}
+        {{listing-update listing=listing updateListing="updateListing" destroyListing="destroyListing"}}
+      </div>
       {{/each}}
       <hr>
-    </div>
   </div>
 </div>

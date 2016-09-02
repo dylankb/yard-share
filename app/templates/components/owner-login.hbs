@@ -9,7 +9,7 @@
     <label for="password">Password</label>
     {{input type="password" value=ownerPassword id="owner-password" class="form-control"}}
   </div>
-  <button class="btn btn-default"{{action 'ownerLogin'}}>Log In</button>
+  <button class="btn btn-default"{{action 'ownerLogin'}}>Log In as Owner</button>
 </form>
 {{else}}
     <button class="btn btn-default"{{action 'loginOwnerFormShow'}}>Log In as Owner</button>

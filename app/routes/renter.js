@@ -3,7 +3,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('renter', params.renter_id);
+    return Ember.RSVP.hash({
+      renter: this.store.findRecord('renter', params.renter_id),
+      owners: this.store.findAll('owner')
+    });
   },
 
   actions: {
@@ -17,8 +20,14 @@ export default Ember.Route.extend({
       renter.save();
     },
     saveReview(params) {
-      var renter = params.renter;
+      var owners = this.modelFor('renter').owners;
+      for(var owner of owners.toArray()) {
+        if(owner.get('username') === params.reviewer) {
+          params.reviewer_id = owner.id;
+        }
+      }
       var newReview = this.store.createRecord('review', params);
+      var renter = params.renter;
       renter.get('reviews').addObject(newReview);
       newReview.save().then(function() {
         return renter.save();

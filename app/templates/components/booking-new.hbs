@@ -13,15 +13,15 @@
   </div>
   <div class="form-group">
     <label for=details>details</label>
-    {{textarea value=details id="details"}}
+    {{textarea class="form-control" value=details id="details"}}
   </div>
   <div class="form-group">
     <label for=when>when</label>
-    {{input type="date" value=when id="when"}}
+    {{input class="form-control" type="date" value=when id="when"}}
   </div>
   <div class="form-group">
     <label for=booker>Your Username</label>
-    {{input value=booker id="booker"}}
+    {{input class="form-control" value=booker id="booker"}}
   </div>
   <button class="btn btn-default" {{action 'saveBooking' listing}}>Save Booking</button>
 </form>

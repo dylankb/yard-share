@@ -6,7 +6,10 @@ export default Ember.Component.extend({
     updateRenterFormShow() {
       this.set('updateRenterForm', true);
     },
-    updateRenter(renter) {
+    updateRenterFormHide() {
+      this.set('updateRenterForm', false);
+    },
+    updateRenter() {
       var params = {
         description: this.get('description'),
         image: this.get('image'),

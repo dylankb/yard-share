@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     addNewReview() {
       this.set('addNewReview', true);
     },
+    dontAddNewReview() {
+      this.set('addNewReview', false);
+    },
     saveReview() {
       var params = {
         reviewer: this.get('username'),

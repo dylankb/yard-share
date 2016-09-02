@@ -1,15 +1,29 @@
-{{renter-details renter=model}}
-{{renter-update renter=model updateRenter="updateRenter"}}
+<div class="container renter-profile">
+  <div class="col-sm-3">
+      <img class="renter" src={{model.image}} alt={{model.username}} />
+    </div>
+    <div class="col-sm-9">
+      <h1>{{model.username}}</h1>
+      <p><strong>About {{model.username}}:</strong> <br>{{model.description}}</p>
 
-<h2>User Reviews</h2>
-<h5>Average Rating: {{rating-stars model.ratingAverage}}</h5>
-<hr>
-{{#each model.reviews as |review|}}
-  {{review-tile review=review}}
-{{/each}}
-{{review-new renter=model saveReview="saveReview"}}
+    <!-- {{renter-details renter=model}} -->
+  </div>
+  <div class="col-sm-12">
+    {{renter-update renter=model updateRenter="updateRenter"}}
+  </div>
 
-<h2>Bookings</h2>
-{{#each model.bookings as |booking|}}
-  {{booking-tile booking=booking}}
-{{/each}}
+  <div class="col-sm-6">
+    <h2>Bookings</h2>
+    {{#each model.bookings as |booking|}}
+    {{booking-tile booking=booking}}
+    {{/each}}
+  </div>
+  <div class="col-sm-6">
+    <h2>User Reviews</h2>
+    <h5>Average Rating: {{rating-stars model.ratingAverage}}</h5>
+    {{review-new renter=model saveReview="saveReview"}}
+    {{#each model.reviews as |review|}}
+    {{review-tile review=review}}
+    {{/each}}
+  </div>
+</div>

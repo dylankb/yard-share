@@ -1,8 +1,7 @@
-<hr>
 <div class="col-sm-4">
   {{#link-to 'listing-detail' listing.id}}<img src={{listing.image1}} alt={{listing.title}} />
   <h3>{{listing.title}}</h3>{{/link-to}}
-  <h5>${{listing.rate}} | {{listing.neighborhood}}</h5>
+  <h5>${{listing.rate}}<span class="pipes">|</span>{{listing.neighborhood}}</h5>
 
   {{#if listing.camping}}
       Camping <span class="pipes">|</span>
@@ -16,4 +15,6 @@
   {{/if}}
 
   <h5>{{rating-stars listing.ratingAverage}}</h5>
+  <!-- {{listing-update listing=listing updateListing="updateListing" destroyListing="destroyListing"}} -->
+  <hr>
 </div>

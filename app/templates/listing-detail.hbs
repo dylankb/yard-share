@@ -1,13 +1,19 @@
-{{listing-details listing=model.listing}}
+<div class="container push-down">
 
-{{google-map listing=model.listing location=model.listing.streetAddress}}
+  {{listing-details listing=model.listing}}
 
-{{review-new listing=model.listing saveReview="saveReview"}}
+  {{google-map listing=model.listing location=model.listing.streetAddress}}
 
-<hr>
+<div class="col-sm-5">
+  {{review-new listing=model.listing saveReview="saveReview"}}
+  {{booking-new listing=model.listing saveBooking="saveBooking"}}
 
-{{#each model.listing.reviews as |review|}}
-  {{review-tile review=review}}
-{{/each}}
+  <hr>
 
-{{booking-new listing=model.listing saveBooking="saveBooking"}}
+  {{#each model.listing.reviews as |review|}}
+    {{review-tile review=review}}
+  {{/each}}
+</div>
+
+
+</div>

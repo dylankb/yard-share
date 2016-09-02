@@ -1,11 +1,18 @@
-<div class="container">
-  <div class="listing-form row">
-    {{owner-details owner=model}}
-    {{listing-new owner=model saveListing="saveListing"}}
-    {{owner-update owner=model updateOwner="updateOwner"}}
-    <h3>My listings:</h3>
-    <hr>
+<div class="container renter-profile">
+  <div class="col-sm-3">
+    <img src={{model.image}} alt={{model.username}} />
   </div>
+  <div class="col-sm-9">
+    <h1>{{model.username}}</h1>
+    <p>{{model.description}}</p>
+  </div>
+    <div class="col-sm-12">
+      {{listing-new owner=model saveListing="saveListing"}}
+      {{owner-update owner=model updateOwner="updateOwner"}}
+      <h3>My listings:</h3>
+      <hr>
+
+    </div>
 
 
   <div class="owner-listing-tiles col-sm-12">

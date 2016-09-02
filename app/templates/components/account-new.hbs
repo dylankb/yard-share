@@ -2,15 +2,17 @@
 <form>
   <div class="form-group">
     <label for="username">Username</label>
-    {{input value=username id="username"}}
+    {{input class="form-control" value=username id="username"}}
+  </div>
+  <div class="form-group">
     <label for="password">Password</label>
-    {{input value=password id="password"}}
+    {{input class="form-control" value=password id="password"}}
+  </div>
     <div class="form-group">
       {{radio-button value='renter' checked=userType}}
       <label for="userType">Renter Account</label><span class="pipes">|</span>
       {{radio-button value='owner' checked=userType}}
       <label for="userType">Owner Account</label>
     </div>
-  </div>
   <button class="btn btn-success"{{action 'createAccount'}}>Sign Up</button>
 </form>
